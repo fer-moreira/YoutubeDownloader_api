@@ -72,13 +72,17 @@ class ConverterViewSet(APIView):
         output_format   = payload.get('output_format');
         output_quality  = payload.get('output_quality');
 
-        yc = YoutubeConverter()
-        yc.convert(
-            video_url,
-            output_format,
-            output_quality
-        )
-        converted_data = yc.output_data
+        try:
+            yc = YoutubeConverter()
+            yc.convert(
+                video_url,
+                output_format,
+                output_quality
+            )
+            converted_data = yc.output_data
+            return Response(converted_data, status=200)
+        except Exception as r:
+            raise
+            return Response({"error":str(r)}, status=500)
 
-        return Response(converted_data, status=200)
 

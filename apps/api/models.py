@@ -33,10 +33,10 @@ class UrlsModel (BaseModel):
         verbose_name="Video Unique ID"
     )
 
-    low_url  = models.URLField(verbose_name="Low quality Element URL")
-    med_url  = models.URLField(verbose_name="Med quality Element URL")
-    high_url = models.URLField(verbose_name="High quality Element URL")
-    max_url  = models.URLField(verbose_name="Max quality Element URL")
+    low_url  = models.TextField(verbose_name="Low quality Element URL")
+    med_url  = models.TextField(verbose_name="Med quality Element URL")
+    high_url = models.TextField(verbose_name="High quality Element URL")
+    max_url  = models.TextField(verbose_name="Max quality Element URL")
 
     def __str__(self):
         return str(self.uid)
