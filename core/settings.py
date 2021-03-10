@@ -54,8 +54,6 @@ INSTALLED_APPS = [
     'gunicorn'
 ]
 
-django_heroku.settings(locals())
-
 
 MIDDLEWARE = [
     # CORS
@@ -68,7 +66,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -183,3 +181,6 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+
+django_heroku.settings(locals())
