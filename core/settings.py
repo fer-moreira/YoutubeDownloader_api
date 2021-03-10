@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # APPS
     'apps.api',
+    'gunicorn'
 ]
 
 django_heroku.settings(locals())
