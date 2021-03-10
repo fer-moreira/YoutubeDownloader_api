@@ -1,3 +1,11 @@
+.vscode
+/.vscode/*
+.vscode/*
+/.vscode
+
+mockup.json
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
